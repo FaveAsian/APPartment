@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
                     if(password.equals("hello")){
                         resultTextView.setText("Success!");
                     }
+                    else{
+                        resultTextView.setText("Failure");
+                    }
                 }
             }
         });
