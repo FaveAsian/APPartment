@@ -1,5 +1,6 @@
 package com.techhog.congressproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button LoginBtn = (Button) findViewById(R.id.LoginBtn);
+        Button RegisterBtn = (Button) findViewById(R.id.RegisterBtn);
+
+        //Action for when login is clicked
         LoginBtn.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -34,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
                         resultTextView.setText("Failure");
                     }
                 }
+            }
+        });
+
+        //Action for when register is clicked
+        RegisterBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v){
+                Intent startIntent = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(startIntent);
             }
         });
     }
