@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                         resultTextView.setText("Success!");
                     }
                     else{
-                        resultTextView.setText("Failure");
+                        LoginPasswordTextField.setError("Wrong Password");
                     }
                 }
             }
